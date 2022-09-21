@@ -1,0 +1,195 @@
+:root{
+    /*nome da variável : código da cor*/
+    --branco-principal:#FFFFFF;
+    --cinza-secundario: #C0C0C0;
+    --botao-azul: #167DF7;
+    --cor-de-fundo: #00030C;
+    --fonte-principal:'Inter';
+    --botao-azul-efeito: #3c92fa;
+
+}
+
+body{
+    background-color: var(--cor-de-fundo);
+    color: var(--branco-principal);
+    font-family: var(--fonte-principal);
+    font-size:16px;
+    font-weight:400;
+
+}
+
+/*bota um estilo para todos os elementos da página
+não define todo o arquivo CSS como o root*/
+*{
+    margin:0;
+    padding:0;
+}
+
+.principal{
+    /*se for uma questão decorativa, usar essa opção*/
+    background-image: url('img/Background.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    /*alinha de acordo com o display do elemento pai, como o flexbox e grid.*/
+    align-items:center;
+    /*alinha no centro todos os elementos inline(que ocupam somente a largura de seu conteúdo) dentro do bloco*/
+    text-align: center;
+}
+
+.container{
+    height: 100vh;
+    display: grid;
+    grid-template-columns:50% 50%;
+}
+
+.container__botao{
+    background-color: var(--botao-azul);
+    border-radius: 5px;
+    /*padding está criando aquele espaçamento interno dentro da borda
+    
+    criam espaço dentro do elemento*/
+    padding: 1em;
+    color: var(--branco-principal);
+    display: block;
+    /*para tira o sublinhado da TAG a*/
+    text-decoration:none;
+    margin-bottom: 1em;
+
+}
+
+.botao_secundario{
+    background-color:transparent;
+    border: 2px solid var(--branco-principal);
+}
+
+.container__aviso{
+    font-size:12px;
+    color: var(--cinza-secundario);
+}
+
+.container__titulo{
+    font-size:28px;
+    font-weight:700;
+}
+
+.container__imagem{
+    margin: 1em 0 2em 0;
+}
+
+/*Para ajustar o conteúdo da div*/
+.container__caixa{
+    /* margem faz aquele espaçamento para delimitar o espaço
+    criam espaço ao redor do elemento*/
+    margin: 0 6em;
+}
+
+.secundario{
+    align-items:center; 
+    margin: 0 10em;
+}
+
+.secundario__imagem{
+    width:80%;
+    transition: width 2s;
+}
+
+.descricao__titulo{
+    font-weight:700;
+    font-size:48px;
+    color: var(--branco-principal);
+    margin-bottom: 0.1em;
+}
+
+.descricao__texto{
+    color: var(--cinza-secundario);
+}
+
+.secundario__botao{
+    display:inline-block;
+    margin-top:1em;
+}
+
+.container__descricao{
+    padding: 2em;
+}
+
+.dispositivos{
+    text-align: center;
+}
+
+.dispositivos__lista{
+    display:flex;
+    justify-content:center;
+    list-style: none;
+    gap: 69px;
+    margin: 5em 0;
+}
+
+.dispositivos__titulo{
+    font-size: 48px;
+    color: var(--branco-principal);
+}
+
+.dispositivos__itens{
+    transition: box-shadow 1.5s;
+}
+
+.lista__item{
+    font-size:32px;
+    color: var(--branco-principal);
+}
+
+
+.rodape{
+    text-align: center;
+    margin: 0 20em;
+}
+
+.rodape__logo{
+    margin: 1em 0;
+}
+
+.rodape__lista{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    gap: 16px;
+    margin: 1.5em 0;
+        
+}
+
+.link__rodape{
+    color: var(--branco-principal);
+    text-decoration:none;
+    transition: color 1s
+}
+
+.rodape__texto{
+    color: var(--cinza-secundario);
+    font-size: 14px;
+    margin: 2em 0;
+}
+
+.link__rodape:hover{
+    color: var(--botao-azul);
+
+}
+
+.container__botao:hover{
+    background-color: var(--botao-azul-efeito);
+    color: var(--cor-de-fundo);
+}
+
+.secundario__imagem:hover{
+    width: 90%;
+}
+
+.dispositivos__itens:hover{
+    box-shadow: 0 0 2em white;
+}
+
+.link__rodape:active{
+    color:purple;
+}
+
+
